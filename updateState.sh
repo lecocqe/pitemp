@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [$# -ne 4]; 
+    then echo "Incorrect number of parameters. Usage: updatestate.sh mqtthost user psw devicename macaddress"
+    exit 2
+fi
+
 # Envoi vers HASS
 host=$1
 user=$2
