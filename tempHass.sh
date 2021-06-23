@@ -32,7 +32,7 @@ then
     # handle = 0x001b, uuid = 00002a19-0000-1000-8000-00805f9b34fb
 
     hnd1b=$(gatttool --device=$MACadd --char-read -a 0x1b)
-    # Characteristic value/descriptor: 63
+    # Characteristic value/descriptor: 63.
     battery=${hnd1b:33:2}
     battery=$((16#$battery))
 
