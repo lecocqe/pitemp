@@ -18,7 +18,7 @@ topic=$t1$device"/humidity/config"
 echo $topic
 mosquitto_pub -h $host -t $topic -r -u $user -P $psw -m '{"device_class": "humidity", "name": "'$device' Humidité", "state_topic": "xiaomi/sensor/'$device'/state", "frc_upd": true, "uniq_id": "'$device'_Humidity", "unit_of_measurement": "%", "value_template": "{{ value_json.humidity }}", "device": { "identifiers": [ "'$device'" ], "name": "'$device' sensors", "model": "Xiaomi Temp V2", "manufacturer": "Xiaomi" } }'
 
-#batt
+#batt.
 topic=$t1$device"/battlevel/config"
 echo $topic
 mosquitto_pub -h $host -t $topic -r -u $user -P $psw -m '{"device_class": "battery", "name": "'$device' Battery Level", "state_topic": "xiaomi/sensor/'$device'/state", "frc_upd": true, "uniq_id": "'$device'_BattLevel", "unit_of_measurement": "%", "value_template": "{{ value_json.batterylevel }}", "device": { "identifiers": [ "'$device'" ], "name": "'$device' sensors", "model": "Xiaomi Temp V2", "manufacturer": "Xiaomi" } }'
