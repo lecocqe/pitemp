@@ -9,4 +9,4 @@
   unregisterdevice.sh host user psw devicenameyouwant
   
 4. update State
-  
+  updateStat.sh host user psw devicenameyouwant macaddress
