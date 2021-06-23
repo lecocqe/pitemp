@@ -13,4 +13,4 @@ scan for Xiaomi temperature sensor v2 BLE devices. Thank you to [Fanjoe](https:/
 `usage: unregisterdevice.sh host user psw devicenameyouwant`
   
 ##### 4. update State
-`updateStat.sh host user psw devicenameyouwant macaddress`
+`updateState.sh host user psw devicenameyouwant macaddress`
