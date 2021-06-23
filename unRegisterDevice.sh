@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [$# -ne 4]; 
+    then echo "Incorrect number of parameters. Usage: unRegisterDevice.sh mqtthost user psw devicename"
+    exit 2
+fi
+
 host=$1
 user=$2
 psw=$3
