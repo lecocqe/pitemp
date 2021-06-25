@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+
+import os;
+
 from bluepy.btle import Scanner, DefaultDelegate
 
 class ScanDelegate(DefaultDelegate):
@@ -12,6 +16,11 @@ class ScanDelegate(DefaultDelegate):
              hdisc=2
 #            print ("Received new data from", dev.addr)
 
+if os.getuid() != 0:
+	print("this script must be executed as root.")
+	exit()
+
+print("Scanning...")
 scanner = Scanner().withDelegate(ScanDelegate())
 devices = scanner.scan(10.0)
 
